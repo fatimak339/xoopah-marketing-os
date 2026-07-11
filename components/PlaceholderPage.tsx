@@ -28,7 +28,7 @@ export default function PlaceholderPage({
   squareCards?: boolean;
 }) {
   return (
-    <div className="space-y-8">
+    <div className="space-y-5">
       <div>
         {crumbs && crumbs.length > 0 && (
           <div className="mb-2 flex flex-wrap items-center gap-1 text-xs text-black/40">
@@ -45,19 +45,19 @@ export default function PlaceholderPage({
         <p className="font-sub text-sm font-semibold uppercase tracking-[0.2em] text-xoopah-blue">
           {eyebrow}
         </p>
-        <h1 className="xoopah-display mt-3 text-3xl text-black">{title}</h1>
+        <h1 className="xoopah-display mt-2 text-2xl text-black sm:text-3xl">{title}</h1>
         <p className="mt-2 max-w-xl text-sm text-black/60">{description}</p>
       </div>
 
       {children && children.length > 0 && squareCards && (
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {children.map((c, i) => (
             <Link
               key={c.href}
               href={c.href}
-              className={`xoopah-card ${ACCENTS[i % ACCENTS.length]} group flex aspect-square flex-col justify-between p-7 pl-9 transition-transform hover:-translate-y-1`}
+              className={`xoopah-card ${ACCENTS[i % ACCENTS.length]} group flex aspect-[4/3] flex-col justify-between p-5 pl-7 transition-transform hover:-translate-y-1`}
             >
-              <span className="font-sub text-xl font-semibold leading-snug text-black">{c.label}</span>
+              <span className="font-sub text-lg font-semibold leading-snug text-black">{c.label}</span>
               <span className="text-sm font-semibold text-xoopah-blue group-hover:underline">
                 Open →
               </span>

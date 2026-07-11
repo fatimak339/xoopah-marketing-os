@@ -171,24 +171,38 @@ export default function BrandVisualPage() {
           content.
         </p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
-          {[1, 2, 4].map((n) => (
-            <div key={n} className="xoopah-card overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`/brand/pattern-0${n}.png`}
-                alt={`Pattern ${n < 10 ? "0" + n : n}`}
-                className="w-full"
-              />
-              <p className="px-4 py-2 text-xs font-semibold text-black/50">
-                Pattern {String(n).padStart(2, "0")}
-              </p>
-            </div>
-          ))}
+          {[1, 3, 5].map((n) => {
+            const broken = n === 3 || n === 5;
+            return (
+              <div key={n} className="xoopah-card overflow-hidden">
+                {broken ? (
+                  <div className="flex h-40 flex-col items-center justify-center gap-2 bg-black/5 p-6 text-center">
+                    <p className="text-sm font-semibold text-black/60">
+                      Pattern {String(n).padStart(2, "0")} needs re-uploading
+                    </p>
+                    <p className="text-xs text-black/40">
+                      The last export of this file was corrupted — please
+                      share the image again and I&apos;ll crop it properly.
+                    </p>
+                  </div>
+                ) : (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={`/brand/pattern-0${n}.png`}
+                    alt={`Pattern ${n < 10 ? "0" + n : n}`}
+                    className="w-full"
+                  />
+                )}
+                <p className="px-4 py-2 text-xs font-semibold text-black/50">
+                  Pattern {String(n).padStart(2, "0")}
+                </p>
+              </div>
+            );
+          })}
         </div>
         <p className="mt-2 text-xs text-black/40">
-          WIP — not fully ratified. Pattern 03 and Pattern 05, and the black
-          logo variant, were corrupted in the last export and are hidden
-          until they're re-pulled from the source brand deck.
+          Patterns 01, 03, and 05 are the selected set from the new
+          branding. 03 and 05 need to be re-uploaded to display correctly.
         </p>
       </div>
 
