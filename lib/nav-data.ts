@@ -34,7 +34,6 @@ export const NAV: NavNode[] = [
     slug: "h1",
     children: [
       { label: "Content", slug: "content" },
-      { label: "Reports", slug: "reports" },
       { label: "Strategy", slug: "strategy" },
     ],
   },

@@ -8,33 +8,19 @@ const AVOID = [
 ];
 
 const PROMISE_LINES = [
-  "Launch ads that work, without the overwhelm.",
-  "Create ads that work, without the expertise.",
-  "Get clients through ads, without the hassle.",
-  "Your ads, built and launched — no agency, no guesswork.",
-  "Stop figuring out ads. Start getting clients.",
-  "The fastest way from \u2018I want to run ads\u2019 to \u2018my ads are live.\u2019",
+  "Turn one product shot into dozens of ready-to-launch ad variants.",
+  "Create scroll-stopping ads for your products — no designer needed.",
+  "Stop starting from scratch. Start remixing what already works.",
+  "Your products, turned into ads that convert.",
+  "More variants, less time, still your brand.",
+  "The fastest way from one product photo to a full ad set.",
 ];
 
-const PILLARS = [
-  { name: "Guided Setup", desc: "From strategy to live campaign, step by step" },
-  { name: "Proven Strategies", desc: "Pre-tested templates built for your industry" },
-  { name: "Smart Suggestions", desc: "AI-powered headlines, captions, and CTAs" },
-  { name: "Clear Results", desc: "Plain-language reporting, not charts" },
-  { name: "Human Backup", desc: "Real support when you need it" },
-];
-
-const CHARACTERS = [
-  {
-    name: "Harvey Specter",
-    ref: "Suits",
-    note: "Razor-sharp, supremely confident, never wastes words. Speaks in outcomes, not explanations. Xoopah's tone when addressing owners who've been burned by agencies.",
-  },
-  {
-    name: "Annalise Keating",
-    ref: "How to Get Away with Murder",
-    note: "Direct, commanding, genuinely invested in the win. Warm beneath the authority. Xoopah's voice when coaching a first-time advertiser through their first campaign.",
-  },
+const FEATURES = [
+  { name: "AI UGC Avatars", desc: "Talking, on-brand creators for your products — no filming required." },
+  { name: "AI Remix", desc: "One prompt turns a proven ad angle into a fresh, on-brand variant." },
+  { name: "Static Editor", desc: "Clean, scroll-stopping product statics — built for e-commerce feeds." },
+  { name: "Voiceover", desc: "Add a script-to-voice layer to any video ad in minutes." },
 ];
 
 const TESTIMONIALS = [
@@ -54,12 +40,14 @@ export default function BrandMessagingPage() {
           Brand · Messaging
         </p>
         <h1 className="mt-3 xoopah-display text-3xl text-black">
-          The sharp friend who <span className="xoopah-highlight">knows marketing</span>.
+          Ad creation, <span className="xoopah-highlight">built for e-commerce brands</span>.
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-black/60">
-          Direct. Action-oriented. Warm but not fluffy. Speaks in outcomes,
-          not features. If a small business owner wouldn&apos;t understand
-          it immediately, it doesn&apos;t belong in Xoopah&apos;s copy.
+          Xoopah is a creation tool first — four features that turn one
+          product or one proven ad angle into many ready-to-launch
+          variants, for e-commerce brands who need volume without a
+          design team. Friendly, direct, and warm — never launch-flow
+          jargon, never corporate.
         </p>
       </div>
 
@@ -91,24 +79,27 @@ export default function BrandMessagingPage() {
       <div className="xoopah-card xoopah-accent-blue p-6 pl-8">
         <h2 className="font-sub text-lg font-semibold text-black">Messaging framework</h2>
         <p className="mt-2 text-sm text-black/60">
-          Pain point → Xoopah as the solution → low-friction CTA.
+          Pain point → Xoopah as the creation engine → low-friction CTA.
         </p>
         <div className="mt-4 flex flex-col gap-2 text-sm sm:flex-row sm:items-center">
-          <span className="rounded-xl bg-[#FFE9D6] px-3 py-2 font-semibold">&quot;Generic ads don&apos;t convert.&quot;</span>
+          <span className="rounded-xl bg-[#FFE9D6] px-3 py-2 font-semibold">&quot;One ad angle isn&apos;t enough anymore.&quot;</span>
           <span className="text-black/30">→</span>
-          <span className="rounded-xl bg-xoopah-light-blue px-3 py-2 font-semibold">&quot;Xoopah creates better ads in minutes.&quot;</span>
+          <span className="rounded-xl bg-xoopah-light-blue px-3 py-2 font-semibold">&quot;Xoopah turns it into dozens of variants.&quot;</span>
           <span className="text-black/30">→</span>
           <span className="rounded-xl bg-[#D6FC93] px-3 py-2 font-semibold">&quot;Try Xoopah today.&quot;</span>
         </div>
       </div>
 
       <div>
-        <h2 className="font-sub text-lg font-semibold text-black">5 Solution Pillars</h2>
+        <h2 className="font-sub text-lg font-semibold text-black">The four features</h2>
+        <p className="mt-1 text-sm text-black/60">
+          Video Templates is a fifth, upcoming creation tool — not live yet.
+        </p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
-          {PILLARS.map((p) => (
-            <div key={p.name} className="xoopah-card xoopah-accent-lime p-5 pl-7">
-              <p className="font-sub font-semibold text-black">{p.name}</p>
-              <p className="mt-1 text-sm text-black/60">{p.desc}</p>
+          {FEATURES.map((f) => (
+            <div key={f.name} className="xoopah-card xoopah-accent-lime p-5 pl-7">
+              <p className="font-sub font-semibold text-black">{f.name}</p>
+              <p className="mt-1 text-sm text-black/60">{f.desc}</p>
             </div>
           ))}
         </div>
@@ -121,23 +112,6 @@ export default function BrandMessagingPage() {
             <p key={line} className="px-6 py-3 text-sm font-semibold text-black">
               &quot;{line}&quot;
             </p>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <h2 className="font-sub text-lg font-semibold text-black">Voice references</h2>
-        <p className="mt-1 text-sm text-black/60">
-          Cultural archetypes Xoopah&apos;s voice lives closest to.
-        </p>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          {CHARACTERS.map((c) => (
-            <div key={c.name} className="xoopah-card xoopah-accent-blue p-6 pl-8">
-              <p className="font-sub font-semibold text-black">
-                {c.name} <span className="font-normal text-black/40">({c.ref})</span>
-              </p>
-              <p className="mt-2 text-sm text-black/60">{c.note}</p>
-            </div>
           ))}
         </div>
       </div>
@@ -157,6 +131,7 @@ export default function BrandMessagingPage() {
           ))}
         </div>
       </div>
+
       <div>
         <h2 className="font-sub text-lg font-semibold text-black">Channel voice</h2>
         <p className="mt-1 text-sm text-black/60">
@@ -187,7 +162,6 @@ export default function BrandMessagingPage() {
           </table>
         </div>
       </div>
-
     </div>
   );
 }

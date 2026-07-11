@@ -19,7 +19,6 @@ const TYPE_SCALE = [
 const LOGO_VARIANTS = [
   { name: "Blue", file: "/brand/logo-blue.png", use: "Default mark" },
   { name: "White", file: "/brand/logo-white.png", use: "On solid, darker backgrounds" },
-  { name: "Black", file: "/brand/logo-black.png", use: "On very light or busy/textured backgrounds" },
 ];
 
 const LOGO_MISUSE = [
@@ -50,7 +49,7 @@ export default function BrandVisualPage() {
       {/* Logo */}
       <div>
         <h2 className="font-sub text-lg font-semibold text-black">Logo</h2>
-        <div className="mt-4 grid gap-4 sm:grid-cols-3">
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {LOGO_VARIANTS.map((l) => (
             <div key={l.name} className="xoopah-card overflow-hidden">
               <div className="flex h-32 items-center justify-center bg-black p-6">
@@ -172,7 +171,7 @@ export default function BrandVisualPage() {
           content.
         </p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
-          {[1, 2, 3, 4, 5].map((n) => (
+          {[1, 2, 4].map((n) => (
             <div key={n} className="xoopah-card overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -186,7 +185,11 @@ export default function BrandVisualPage() {
             </div>
           ))}
         </div>
-        <p className="mt-2 text-xs text-black/40">WIP — not fully ratified.</p>
+        <p className="mt-2 text-xs text-black/40">
+          WIP — not fully ratified. Pattern 03 and Pattern 05, and the black
+          logo variant, were corrupted in the last export and are hidden
+          until they're re-pulled from the source brand deck.
+        </p>
       </div>
 
       {/* Layout */}

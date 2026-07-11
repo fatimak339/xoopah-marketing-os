@@ -7,6 +7,7 @@ export default function H1StrategyPage() {
       title="The thinking behind the work"
       description="ICP research, competitor tracking, internal meetings, and the roles that support the strategy."
       crumbs={[{ label: "H1", href: "/h1" }]}
+      squareCards
       children={[
         { label: "ICP & Research", href: "/icp" },
         { label: "Research Repository", href: "/h1/research-repository" },

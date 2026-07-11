@@ -18,12 +18,14 @@ export default function PlaceholderPage({
   description,
   crumbs,
   children,
+  squareCards,
 }: {
   eyebrow: string;
   title: string;
   description: string;
   crumbs?: CrumbItem[];
   children?: ChildLink[];
+  squareCards?: boolean;
 }) {
   return (
     <div className="space-y-8">
@@ -47,7 +49,24 @@ export default function PlaceholderPage({
         <p className="mt-2 max-w-xl text-sm text-black/60">{description}</p>
       </div>
 
-      {children && children.length > 0 && (
+      {children && children.length > 0 && squareCards && (
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {children.map((c, i) => (
+            <Link
+              key={c.href}
+              href={c.href}
+              className={`xoopah-card ${ACCENTS[i % ACCENTS.length]} group flex aspect-square flex-col justify-between p-7 pl-9 transition-transform hover:-translate-y-1`}
+            >
+              <span className="font-sub text-xl font-semibold leading-snug text-black">{c.label}</span>
+              <span className="text-sm font-semibold text-xoopah-blue group-hover:underline">
+                Open →
+              </span>
+            </Link>
+          ))}
+        </div>
+      )}
+
+      {children && children.length > 0 && !squareCards && (
         <div className="grid gap-4 sm:grid-cols-2">
           {children.map((c, i) => (
             <Link

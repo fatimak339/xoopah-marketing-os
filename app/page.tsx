@@ -16,14 +16,6 @@ const CHANNELS = [
   { href: "/icp/what-next", title: "ICP Validation", desc: "Open research threads and next steps for validating the ICP.", accent: "xoopah-accent-coral" },
 ];
 
-const SECTIONS = [
-  { href: "/brand", title: "Brand", desc: "Visual, messaging, and positioning — from the Brand Overview and Master Brief.", accent: "xoopah-accent-blue" },
-  { href: "/competitors", title: "Competitors", desc: "HeyGen, Creatify, AdCreative.ai, Pencil, Zeely — tracked by feature.", accent: "xoopah-accent-yellow" },
-  { href: "/h1", title: "H1", desc: "Everything filled out so far — Content, Reports, and Strategy.", accent: "xoopah-accent-orange" },
-  { href: "/h2", title: "H2", desc: "The second half — ICP is filled in, the rest is just getting started.", accent: "xoopah-accent-lime" },
-  { href: "/learning-hub", title: "Learning Hub", desc: "Playbooks and frameworks — coming soon.", accent: "xoopah-accent-pink" },
-];
-
 export default function DashboardPage() {
   return (
     <div className="space-y-16">
@@ -128,27 +120,6 @@ export default function DashboardPage() {
           Every workstream on this page — brand, ICP, content, channels —
           is in service of one goal for 2026: reaching real PMF.
         </p>
-      </section>
-
-      <section>
-        <h2 className="xoopah-display text-2xl text-black">Sections</h2>
-        <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SECTIONS.map((card) => (
-            <Link
-              key={card.href}
-              href={card.href}
-              className={`xoopah-card ${card.accent} group flex flex-col justify-between p-6 pl-8 transition-transform hover:-translate-y-1`}
-            >
-              <div>
-                <h3 className="font-sub text-lg font-semibold text-black">{card.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-black/60">{card.desc}</p>
-              </div>
-              <span className="mt-6 text-sm font-semibold text-xoopah-blue group-hover:underline">
-                Open →
-              </span>
-            </Link>
-          ))}
-        </div>
       </section>
     </div>
   );
