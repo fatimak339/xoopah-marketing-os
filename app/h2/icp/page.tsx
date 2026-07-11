@@ -1,4 +1,7 @@
 import Link from "next/link";
+import NotionSyncedSection from "@/components/NotionSyncedSection";
+
+export const revalidate = 300;
 
 export default function H2IcpPage() {
   return (
@@ -60,6 +63,8 @@ export default function H2IcpPage() {
           See H1 Strategy research →
         </Link>
       </div>
+
+      <NotionSyncedSection section="ICP" />
     </div>
   );
 }

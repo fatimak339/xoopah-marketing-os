@@ -1,12 +1,26 @@
-import PlaceholderPage from "@/components/PlaceholderPage";
+import Link from "next/link";
+import NotionSyncedSection from "@/components/NotionSyncedSection";
+
+export const revalidate = 300;
 
 export default function H2CompetitorsPage() {
   return (
-    <PlaceholderPage
-      eyebrow="H2 2026 / Competitors"
-      title="Not started yet"
-      description="Competitor tracking for H2 will land here once it kicks off."
-      crumbs={[{ label: "H2", href: "/h2" }]}
-    />
+    <div className="space-y-6">
+      <div>
+        <div className="mb-2 flex flex-wrap items-center gap-1 text-xs text-black/40">
+          <Link href="/h2" className="hover:text-xoopah-blue">H2</Link>
+          <span>/</span>
+        </div>
+        <p className="font-sub text-sm font-semibold uppercase tracking-[0.2em] text-xoopah-blue">
+          H2 2026 / Competitors
+        </p>
+        <h1 className="xoopah-display mt-2 text-2xl text-black sm:text-3xl">Not started yet</h1>
+        <p className="mt-2 max-w-xl text-sm text-black/60">
+          Auto-synced from Notion — tag a page &quot;Competitors&quot; in the
+          H2 Document Hub and it lands here on its own.
+        </p>
+      </div>
+      <NotionSyncedSection section="Competitors" />
+    </div>
   );
 }
