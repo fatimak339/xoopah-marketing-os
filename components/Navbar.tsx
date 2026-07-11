@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { NAV, type NavNode } from "@/lib/nav-data";
 
 function pathFor(trail: string[]) {
@@ -12,28 +12,29 @@ function pathFor(trail: string[]) {
 
 function SimpleDropdown({ item, trail }: { item: NavNode; trail: string[] }) {
   const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const myTrail = [...trail, item.slug];
 
-  useEffect(() => {
-    function onClick(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
-    }
-    document.addEventListener("mousedown", onClick);
-    return () => document.removeEventListener("mousedown", onClick);
-  }, []);
+  function openNow() {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpen(true);
+  }
+
+  function closeSoon() {
+    closeTimer.current = setTimeout(() => setOpen(false), 120);
+  }
 
   return (
-    <div className="relative" ref={ref}>
-      <button
-        onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-1 rounded-full px-4 py-2 text-sm font-semibold text-white/85 transition-colors hover:text-white"
-      >
+    <div
+      className="relative"
+      onMouseEnter={openNow}
+      onMouseLeave={closeSoon}
+    >
+      <button className="flex items-center gap-1 rounded-full px-4 py-2 text-sm font-semibold text-white/85 transition-colors hover:text-white">
         {item.label}
-        <span className={`transition-transform ${open ? "rotate-180" : ""}`}>⌄</span>
       </button>
       {open && (
-        <div className="absolute left-0 top-full mt-2 min-w-[220px] rounded-2xl bg-white p-2 shadow-card">
+        <div className="absolute left-0 top-full min-w-[220px] rounded-2xl bg-white p-2 pt-3 shadow-card">
           <Link
             href={pathFor(myTrail)}
             onClick={() => setOpen(false)}
