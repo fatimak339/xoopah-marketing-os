@@ -62,21 +62,68 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      <section className="xoopah-card xoopah-accent-orange p-6 pl-8 lg:p-8 lg:pl-10">
-        <span className="rounded-full bg-xoopah-light-blue px-3 py-1 text-xs font-semibold text-xoopah-blue">
-          Positioning — open right now
-        </span>
-        <h2 className="mt-3 font-sub text-lg font-semibold text-black">
-          Recommended: workflow compression + variants
-        </h2>
-        <p className="mt-2 max-w-2xl text-sm italic text-black/70">
-          &quot;Turn one proven ad angle into dozens of launch-ready
-          variants — in minutes, with no designer, no agency, and nothing
-          else added to your stack.&quot;
-        </p>
-        <Link href="/brand/positioning" className="mt-4 inline-block text-sm font-semibold text-xoopah-blue hover:underline">
-          See all positioning options →
-        </Link>
+      <section>
+        <h2 className="xoopah-display text-2xl text-black">Priority tasks</h2>
+        <div className="mt-4 space-y-4">
+          <div className="xoopah-card xoopah-accent-orange flex flex-col gap-3 p-6 pl-8 sm:flex-row sm:items-start sm:gap-6">
+            <span className="font-sub text-2xl font-extrabold text-black/15">01</span>
+            <div className="flex-1">
+              <span className="rounded-full bg-xoopah-light-blue px-3 py-1 text-xs font-semibold text-xoopah-blue">
+                Positioning — open right now
+              </span>
+              <h3 className="mt-3 font-sub text-lg font-semibold text-black">
+                Recommended: workflow compression + variants
+              </h3>
+              <p className="mt-2 max-w-2xl text-sm italic text-black/70">
+                &quot;Turn one proven ad angle into dozens of launch-ready
+                variants — in minutes, with no designer, no agency, and
+                nothing else added to your stack.&quot;
+              </p>
+              <Link href="/brand/positioning" className="mt-4 inline-block text-sm font-semibold text-xoopah-blue hover:underline">
+                See all positioning options →
+              </Link>
+            </div>
+          </div>
+
+          <div className="xoopah-card xoopah-accent-lime flex flex-col gap-3 p-6 pl-8 sm:flex-row sm:items-start sm:gap-6">
+            <span className="font-sub text-2xl font-extrabold text-black/15">02</span>
+            <div className="flex-1">
+              <span className="rounded-full bg-[#EFFBD9] px-3 py-1 text-xs font-semibold text-black/60">
+                Growth strategy — in progress
+              </span>
+              <h3 className="mt-3 font-sub text-lg font-semibold text-black">
+                Defining the path to PMF this year
+              </h3>
+              <p className="mt-2 max-w-2xl text-sm text-black/70">
+                Channels, sequencing, and where effort goes next — fed by
+                daily research on what&apos;s actually working across the
+                industry right now.
+              </p>
+              <Link href="/learning-hub" className="mt-4 inline-block text-sm font-semibold text-xoopah-blue hover:underline">
+                See the Learning Hub →
+              </Link>
+            </div>
+          </div>
+
+          <div className="xoopah-card xoopah-accent-blue flex flex-col gap-3 p-6 pl-8 sm:flex-row sm:items-start sm:gap-6">
+            <span className="font-sub text-2xl font-extrabold text-black/15">03</span>
+            <div className="flex-1">
+              <span className="rounded-full bg-xoopah-light-blue px-3 py-1 text-xs font-semibold text-xoopah-blue">
+                Website rebuild — in progress
+              </span>
+              <h3 className="mt-3 font-sub text-lg font-semibold text-black">
+                Six-phase rebuild underway
+              </h3>
+              <p className="mt-2 max-w-2xl text-sm text-black/70">
+                Homepage, four feature pages, About, and Pricing. Webflow
+                developer engaged, targeting a mid-July launch.
+              </p>
+              <Link href="/website" className="mt-4 inline-block text-sm font-semibold text-xoopah-blue hover:underline">
+                See website status →
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>
