@@ -78,7 +78,7 @@ export default function Navbar() {
       <div className="xoopah-wave-texture" aria-hidden="true" />
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
         <Link href="/" className="shrink-0 text-xl font-extrabold tracking-tight text-white">
-          xoopah <span className="font-normal opacity-80">/ os</span>
+          xoopah
         </Link>
 
         <nav className="flex flex-1 flex-wrap items-center justify-center gap-1 px-4">
