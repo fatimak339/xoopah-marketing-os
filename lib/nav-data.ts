@@ -45,6 +45,7 @@ export const NAV: NavNode[] = [
       { label: "Competitors", slug: "competitors" },
       { label: "Content", slug: "content" },
       { label: "Reporting", slug: "reporting" },
+      { label: "Strategy", slug: "strategy" },
     ],
   },
   { label: "Learning Hub", slug: "learning-hub" },
