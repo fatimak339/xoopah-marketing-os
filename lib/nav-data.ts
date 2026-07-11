@@ -9,6 +9,7 @@ export type NavNode = NavLeaf & {
 
 export const NAV: NavNode[] = [
   { label: "Home", slug: "" },
+  { label: "ICP", slug: "icp" },
   {
     label: "Brand",
     slug: "brand",
@@ -41,8 +42,6 @@ export const NAV: NavNode[] = [
     label: "H2",
     slug: "h2",
     children: [
-      { label: "ICP", slug: "icp" },
-      { label: "Competitors", slug: "competitors" },
       { label: "Content", slug: "content" },
       { label: "Reporting", slug: "reporting" },
       { label: "Strategy", slug: "strategy" },

@@ -56,8 +56,8 @@ export default function DashboardPage() {
             their own name, including brands that layer a services offering
             alongside their products. See the H2 update for what's new.
           </p>
-          <Link href="/h2/icp" className="mt-4 inline-block text-sm font-semibold text-xoopah-blue hover:underline">
-            See the H2 ICP update →
+          <Link href="/icp" className="mt-4 inline-block text-sm font-semibold text-xoopah-blue hover:underline">
+            See the updated ICP →
           </Link>
         </div>
       </section>

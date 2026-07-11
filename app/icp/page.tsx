@@ -62,12 +62,27 @@ export default function ICPPage() {
       <div className="space-y-12">
         <div>
           <p className="font-sub text-sm font-semibold uppercase tracking-[0.2em] text-xoopah-blue">
-            ICP · Decided
+            ICP · Decided, updated for H2
           </p>
           <h1 className="mt-3 max-w-2xl xoopah-display text-3xl text-black sm:text-4xl">
             <span className="xoopah-highlight">E-commerce businesses</span>{" "}
-            selling physical products under their own brand.
+            selling physical products under their own brand — now including
+            brands with a services layer.
           </h1>
+        </div>
+
+        <div className="xoopah-card xoopah-accent-pink p-6 pl-8">
+          <span className="rounded-full bg-xoopah-light-blue px-3 py-1 text-xs font-semibold text-xoopah-blue">
+            H2 update
+          </span>
+          <p className="mt-3 text-sm leading-relaxed text-black/70">
+            Widened for H2 to include US e-commerce brands that combine
+            product sales with a services offering (e.g. product + fitting,
+            product + consultation), not just pure product-only sellers.
+            Beauty, skincare, pets, and electronics remain the
+            strongest-fit categories from H1 research. Validation for this
+            update is tracked under ICP Validation on the homepage.
+          </p>
         </div>
 
         <div className="xoopah-card xoopah-accent-blue p-6 pl-8">
